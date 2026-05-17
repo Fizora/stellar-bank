@@ -1,6 +1,6 @@
 // src/app/resources/page.tsx
-import PageTemplate from "@/app/components/PageTemplate";
 import { LuFileText, LuVideo, LuBookOpen } from "react-icons/lu";
+import PageTemplate from "../components/PageTemplate";
 
 export default function ResourcesPage() {
   return (
