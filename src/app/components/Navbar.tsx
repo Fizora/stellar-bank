@@ -102,87 +102,93 @@ export default function Navbar() {
 
         <button
           className="lg:hidden -m-2.5 p-2.5 text-gray-700"
-          onClick={() => setMobileOpen(true)}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
-          <LuMenu className="h-6 w-6" />
+          {mobileOpen ? (
+            <LuX className="h-6 w-6" />
+          ) : (
+            <LuMenu className="h-6 w-6" />
+          )}
         </button>
       </nav>
 
-      {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-white">
-          <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <a href="/" className="flex items-center gap-2">
-              <LuSparkles className="h-6 w-6 text-primary-600" />
-              <span className="text-xl font-bold">Stellar Bank</span>
+      {/* Mobile menu - tidak menggunakan fixed inset, melainkan dropdown di bawah navbar */}
+      <div
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-white border-t border-gray-200 py-4 px-4 shadow-lg">
+          <div className="space-y-2">
+            <a
+              href="/personal"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Personal
             </a>
-            <button onClick={() => setMobileOpen(false)}>
-              <LuX className="h-6 w-6" />
-            </button>
+            <a
+              href="/business"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Business
+            </a>
+            <a
+              href="/wealth"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Wealth
+            </a>
+            <a
+              href="/resources"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Resources
+            </a>
+            <a
+              href="/security"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Security Center
+            </a>
+            <a
+              href="/careers"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Careers
+            </a>
+            <a
+              href="/contact"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact
+            </a>
           </div>
-          <div className="flow-root mt-6">
-            <div className="-my-6 divide-y divide-gray-200">
-              <div className="space-y-2 py-6">
-                <a
-                  href="/personal"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Personal
-                </a>
-                <a
-                  href="/business"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Business
-                </a>
-                <a
-                  href="/wealth"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Wealth
-                </a>
-                <a
-                  href="/resources"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Resources
-                </a>
-                <a
-                  href="/security"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Security Center
-                </a>
-                <a
-                  href="/careers"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Careers
-                </a>
-                <a
-                  href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Contact
-                </a>
-              </div>
-              <div className="py-6 flex flex-col gap-3">
-                <a
-                  href="/login"
-                  className="rounded-full bg-primary-50 px-4 py-2 text-center text-sm font-semibold text-primary-600"
-                >
-                  Sign In
-                </a>
-                <a
-                  href="/open-account"
-                  className="rounded-full bg-primary-600 px-4 py-2 text-center text-sm font-semibold text-white"
-                >
-                  Open Account
-                </a>
-              </div>
-            </div>
+          <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="/login"
+              className="rounded-full bg-primary-50 px-4 py-2 text-center text-sm font-semibold text-primary-600"
+              onClick={() => setMobileOpen(false)}
+            >
+              Sign In
+            </a>
+            <a
+              href="/open-account"
+              className="rounded-full bg-primary-600 px-4 py-2 text-center text-sm font-semibold text-white"
+              onClick={() => setMobileOpen(false)}
+            >
+              Open Account
+            </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
