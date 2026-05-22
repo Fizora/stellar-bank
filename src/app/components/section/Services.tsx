@@ -12,32 +12,32 @@ const services = [
   {
     icon: FiHome,
     title: "Personal Banking",
-    desc: "Premium checking, high-yield savings, and custom credit solutions tailored to your goals.",
+    desc: "Checking, savings, and lending solutions designed for everyday financial needs.",
   },
   {
     icon: FiBriefcase,
     title: "Business Banking",
-    desc: "From startups to enterprises: dedicated accounts, treasury services, and SBA loans.",
+    desc: "Accounts, treasury tools, and financing options that help businesses operate with confidence.",
   },
   {
     icon: FiPieChart,
     title: "Wealth Management",
-    desc: "Comprehensive planning, investment portfolios, and trust services from certified advisors.",
+    desc: "Planning and portfolio services to help clients preserve and grow wealth over time.",
   },
   {
     icon: FiGlobe,
-    title: "Global Transfers",
-    desc: "Instant international wires with competitive FX rates and zero hidden fees.",
+    title: "International Transfers",
+    desc: "Cross-border payments with clear processes and competitive foreign exchange solutions.",
   },
   {
     icon: FiCreditCard,
-    title: "Stellar Card",
-    desc: "Premium metal card with unlimited cashback, travel perks, and concierge service.",
+    title: "Debit and Card Services",
+    desc: "Convenient card solutions with secure access and everyday spending support.",
   },
   {
     icon: FiShield,
-    title: "Digital Vault",
-    desc: "Bank‑grade encrypted storage for documents, crypto assets, and digital inheritance.",
+    title: "Digital Security",
+    desc: "Protection measures designed to safeguard accounts, documents, and customer data.",
   },
 ];
 
@@ -47,16 +47,17 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-            Our Ecosystem
+            Our Services
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Banking, evolved.
+            Banking solutions for every stage.
           </h2>
           <p className="mt-4 text-gray-600">
-            From daily spending to generational wealth, Stellar provides a
-            unified financial command center.
+            From daily transactions to strategic financial planning, we deliver
+            a complete banking experience in one place.
           </p>
         </div>
+
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
             <div

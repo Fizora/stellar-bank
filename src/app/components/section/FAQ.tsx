@@ -6,32 +6,33 @@ import { FiChevronRight, FiArrowRight } from "react-icons/fi";
 const faqs = [
   {
     q: "How do I open an account with Stellar Bank?",
-    a: "Opening an account takes less than 5 minutes. Simply click 'Open Account' on our homepage, verify your identity with a government ID, and make an initial deposit of $10 or more. You'll get instant access to your digital wallet and debit card.",
+    a: "You can begin the application online in a few simple steps. You will typically need a government-issued ID and basic personal information to complete verification.",
   },
   {
-    q: "Is Stellar Bank FDIC insured?",
-    a: "Yes, Stellar Bank is a member FDIC (Certificate #58421). Deposits are insured up to $250,000 per depositor, per ownership category.",
+    q: "Is Stellar Bank insured?",
+    a: "Eligible deposit accounts are protected in accordance with the applicable deposit insurance rules in our operating jurisdiction. Specific coverage details are available in the product disclosures.",
   },
   {
     q: "What are the monthly fees?",
-    a: "Our Stellar Checking account has $0 monthly fees with no minimum balance. Premium accounts have fees that can be waived with qualifying activities like direct deposit or maintaining a $5,000 balance.",
+    a: "Fees vary by account type. Key pricing information is shown in the relevant product schedule so you can review charges before applying.",
   },
   {
     q: "How secure is the mobile app?",
-    a: "We use 256‑bit encryption, biometric login, real‑time fraud monitoring, and optional hardware security keys. Stellar Bank has never experienced a data breach.",
+    a: "We use industry-standard security controls, including encryption, authentication measures, and monitoring designed to help protect customer accounts and data.",
   },
   {
-    q: "Can I invest in crypto through Stellar?",
-    a: "Yes, through our Stellar Digital division you can trade Bitcoin, Ethereum, and 20+ altcoins directly from your banking dashboard with institutional custody.",
+    q: "Does Stellar Bank offer investment or digital asset services?",
+    a: "Availability depends on the products and jurisdictions we support. Where offered, those services are provided through separate disclosures and eligibility requirements.",
   },
   {
-    q: "What customer support options exist?",
-    a: "24/7 live chat, phone support with average 23‑second pickup, and dedicated relationship managers for premium clients.",
+    q: "What customer support options are available?",
+    a: "Customers can reach us through the contact channels listed on our website. Support availability may vary by service and account type.",
   },
 ];
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
+
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -40,9 +41,10 @@ export default function FAQ() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-gray-600">
-            Everything you need to know about Stellar Bank.
+            Clear answers about our accounts, services, and support.
           </p>
         </div>
+
         <div className="mt-12 space-y-4">
           {faqs.map((faq, idx) => (
             <div
@@ -55,7 +57,9 @@ export default function FAQ() {
               >
                 {faq.q}
                 <FiChevronRight
-                  className={`h-5 w-5 text-gray-500 transition-transform ${open === idx ? "rotate-90" : ""}`}
+                  className={`h-5 w-5 text-gray-500 transition-transform ${
+                    open === idx ? "rotate-90" : ""
+                  }`}
                 />
               </button>
               {open === idx && (
@@ -66,6 +70,7 @@ export default function FAQ() {
             </div>
           ))}
         </div>
+
         <div className="mt-12 text-center">
           <a
             href="#"

@@ -17,7 +17,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm"
+          ? "bg-white/90 backdrop-blur-md border-b border-gray-200"
           : "bg-white/80 backdrop-blur-sm border-b border-gray-100"
       }`}
     >
@@ -25,9 +25,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="/" className="flex items-center gap-2">
             <LuSparkles className="h-7 w-7 text-primary-600" />
-            <span className="text-xl font-bold text-gray-900">
-              Stellar Bank
-            </span>
+            <span className="text-xl font-bold text-gray-900">Stellar</span>
           </a>
         </div>
 

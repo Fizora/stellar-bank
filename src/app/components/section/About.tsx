@@ -8,10 +8,18 @@ import {
 } from "react-icons/fi";
 
 const stats = [
-  { value: "$32B+", label: "Assets Under Management", icon: FiTrendingUp },
-  { value: "500k+", label: "Active Clients", icon: FiUsers },
-  { value: "99.99%", label: "Uptime SLA", icon: FiShield },
-  { value: "0", label: "Security Breaches", icon: FiAward },
+  {
+    value: "Since 2021",
+    label: "Serving clients with modern banking",
+    icon: FiTrendingUp,
+  },
+  { value: "500k+", label: "Clients supported across segments", icon: FiUsers },
+  { value: "24/7", label: "Digital banking access", icon: FiShield },
+  {
+    value: "100%",
+    label: "Commitment to security and compliance",
+    icon: FiAward,
+  },
 ];
 
 export default function About() {
@@ -21,36 +29,43 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Redefining{" "}
-              <span className="text-primary-600">Financial Excellence</span>
+              A modern bank with a
+              <span className="text-primary-600"> disciplined approach</span>
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Founded in 2021 by former executives from Goldman Sachs and
-              Stripe, Stellar Bank bridges the gap between traditional banking
-              security and AI‑powered fintech velocity. Our mission: democratize
-              institutional‑grade finance.
+              Founded to combine reliable banking foundations with a modern
+              digital experience, we focus on helping customers manage everyday
+              finances, grow businesses, and plan for the future.
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex gap-3">
                 <FiCheckCircle className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
-                <span>Licensed in all 50 states + EU (EMI #SC8792)</span>
+                <span>
+                  Built around security, privacy, and operational resilience.
+                </span>
               </div>
               <div className="flex gap-3">
                 <FiCheckCircle className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
-                <span>Backed by Sequoia Capital & Andreessen Horowitz</span>
+                <span>
+                  Designed for personal, business, and wealth management needs.
+                </span>
               </div>
               <div className="flex gap-3">
                 <FiCheckCircle className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
-                <span>4.9/5 Trustpilot rating from 15,000+ reviews</span>
+                <span>
+                  Focused on transparent service and long-term client
+                  relationships.
+                </span>
               </div>
             </div>
             <a
               href="#"
               className="mt-10 inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
             >
-              Our manifesto →
+              Learn about our mission →
             </a>
           </div>
+
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, idx) => (
               <div
